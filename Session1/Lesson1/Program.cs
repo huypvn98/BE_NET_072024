@@ -13,6 +13,9 @@ namespace Lesson1
             Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Console.Write("Nhập số thứ nhất: ");
+            //Kiểm tra biến num1 có phải là số không
+
+
             double num1 = Convert.ToDouble(Console.ReadLine());
 
             Console.Write("Nhập số thứ hai: ");
@@ -26,5 +29,7 @@ namespace Lesson1
             Console.WriteLine("Tích của hai số là: " + product);
             Console.WriteLine("Hiệu của hai số là: " + difference);
         }
+
+
     }
 }
