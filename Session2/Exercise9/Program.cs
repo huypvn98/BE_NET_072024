@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise7
+namespace Exercise9
 {
     internal class Program
     {
@@ -34,41 +34,16 @@ namespace Exercise7
                         }
                     }
                 }
-                PrintEvenNumbers(arr);
+                Array.Sort(arr);
+                Console.WriteLine("Mảng số nguyên tăng dần: " + string.Join(", ", arr));
+                Array.Reverse(arr);
+                Console.WriteLine("Mảng số nguyên giảm dần: " + string.Join(", ", arr));
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.StackTrace);
             }
-        }
-        static void PrintEvenNumbers(int[] arr)
-        {
-            try
-            {
-                List<int> evenNumbers = new List<int>();
-                foreach (int num in arr)
-                {
-                    if (num % 2 == 0)
-                        evenNumbers.Add(num);
-                }
-                if(evenNumbers.Count == 0)
-                {
-                    Console.WriteLine("Không có số chẵn nào trong mảng.");
-                }
-                else
-                {
-                    Console.WriteLine("Các số chẵn trong mảng: {0}", evenNumbers.Select(n => n.ToString()).Aggregate((s1, s2) => s1 + ", " + s2));
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine(ex.StackTrace);
-            }
-
         }
     }
 }
