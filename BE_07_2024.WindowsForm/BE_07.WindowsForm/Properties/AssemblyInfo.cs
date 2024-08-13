@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BE072024.Common_NetFrameWork")]
+[assembly: AssemblyTitle("BE_07.WindowsForm")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Ban Quyen 21AK22.COM & HIENPC.COM")]
-[assembly: AssemblyProduct("BE072024.Common_NetFrameWork")]
+[assembly: AssemblyProduct("BE_07.WindowsForm")]
 [assembly: AssemblyCopyright("Copyright © Ban Quyen 21AK22.COM & HIENPC.COM 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4ed0be5e-a44c-4ee2-8177-143657c1167d")]
+[assembly: Guid("9a58910d-0205-4e92-8387-134a37c96dbf")]
 
 // Version information for an assembly consists of the following four values:
 //

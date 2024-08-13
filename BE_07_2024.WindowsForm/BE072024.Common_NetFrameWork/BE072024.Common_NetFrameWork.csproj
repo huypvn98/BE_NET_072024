@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6B2BA9BF-3E99-43D9-AE1A-611338F26C04}</ProjectGuid>
+    <ProjectGuid>{4ED0BE5E-A44C-4EE2-8177-143657C1167D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BE072024.Common_NetFrameWork</RootNamespace>
@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserHelper.cs" />
     <Compile Include="ValidateData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

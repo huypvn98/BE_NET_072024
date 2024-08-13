@@ -1,26 +1,38 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Globalization;
 
 namespace BE072024.Common_NetFrameWork
 {
     public static class ValidateData
     {
-        //Truyền vào tham số là 1 control Combobox
-        //Kiểm tra xem Combobox có được chọn hay không
-        //Nếu chưa chọn thì thông báo lỗi
-        //Trả về true nếu đã chọn, false nếu chưa chọn
+        public static bool CheckNull_Data(string input)
+        {
+            return string.IsNullOrEmpty(input) ? false : true;
+        }
 
-        //public static bool CheckInput (string value, string name)
-        //{
-        //    try { 
-        //        value = value.Trim(); } 
-        //    catch(Exception ex) {
-        //        MessageBox.Show(ex.Message);
-        //        MessageBox.Show(ex.StackTrace);
-        //    }
-        //}
+        public static bool IsNumberic(string input)
+        {
+            int n;
+            bool isNumeric = int.TryParse(input, out n);
+            return isNumeric;
+        }
+        public static bool IsDouble(string input, out double n)
+        {
+            bool isNumeric = double.TryParse(input, out n);
+            return isNumeric;
+        }
+
+        public static bool CheckValidDateTime(string input)
+        {
+
+            DateTime dateValue;
+            if (!DateTime.TryParseExact(input, "dd/MM/yyyy", new CultureInfo("en-US"), DateTimeStyles.None, out dateValue))
+            {
+                return false;
+
+            }
+
+            return true;
+        }
     }
 }

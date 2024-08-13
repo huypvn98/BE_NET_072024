@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace BE072024.DataAccess_NetFrameWork.DO.Enum
 {
-    public enum Position
+    public enum InteractiveMethod
     {
-        EMPLOYEE = 1,
-        SUB_LEADER = 2,
-        LEADER = 3,
-        MANAGER = 4,
-        DIRECTOR = 5
+        PHONE = 0,
+        EMAIL = 1,
+        DIRECT = 2
     }
 }
