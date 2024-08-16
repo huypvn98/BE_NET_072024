@@ -43,66 +43,71 @@ namespace BE_07.ConsoleApp
 
         static void Main(string[] args)
         {
-            int optionNumber = 0;
-            string optionChar = "Y";
-
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            loop2:
-            Console.WriteLine("**************Hãy chọn thao tác cần thực hiện***************");
-            Console.WriteLine("------------------------------------------------------------");
-            Console.WriteLine("1.   Tính tổng 2 số.");
-            Console.WriteLine("2.   Tính tích 2 số.");
-            Console.WriteLine("3.   Tính hiệu 2 số."); 
-            Console.WriteLine("4.   Giải phương trình bậc 1."); 
-            Console.WriteLine("5.   Giải phương trình bậc 2.");
-            Console.WriteLine("6.   Chuyển đổi độ C thành độ K.");
-            Console.WriteLine("7.   Chuyển đổi độ C thành độ F.");
-            Console.WriteLine("8.   Tính giai thừa của 1 số.");
-            Console.WriteLine("9.   Liệt kê tất cả các số nguyên tố nhỏ hơn 1 số.");
-            Console.WriteLine("10.  Kiểm tra một số là số chẵn hay số lẻ.");
-            Console.WriteLine("11.  In ra mảng số lẻ từ một mảng số nguyên.");
-            Console.WriteLine("12.  In ra mảng số chẵn từ một mảng số nguyên.");
-            Console.WriteLine("13.  Sắp xếp mảng tăng dần.");
-            Console.WriteLine("14.  Sắp xếp mảng giảm dần.");
-            Console.WriteLine("15.  Hiển thị số bằng chữ.");
-            Console.WriteLine("16.  Tính toán phân số.");
-            Console.WriteLine("17.  Thống kê tình hình học tập của một lớp gồm 5 sinh viên.");
-            Console.WriteLine("------------------------------------------------------------");
+            Bai8_Bussiness bai8_Bussiness = new Bai8_Bussiness();
+            bai8_Bussiness.loadMenu();
+            //NhanVien nhanVien = new NhanVien("Nguyen Van A", "NV001", 1000);
+            //Console.WriteLine(nhanVien.HoTen);
+            //int optionNumber = 0;
+            //string optionChar = "Y";
 
-            loop:
-            if(!ValidateData.CheckNullAndGreaterThanZero_Data(Console.ReadLine(), optionNumber))
-            {
-                Console.WriteLine("Giá trị nhập vào không hợp lệ. Vui lòng nhập lại.");
-                goto loop;
-            }    
+            
+            //loop2:
+            //Console.WriteLine("**************Hãy chọn thao tác cần thực hiện***************");
+            //Console.WriteLine("------------------------------------------------------------");
+            //Console.WriteLine("1.   Tính tổng 2 số.");
+            //Console.WriteLine("2.   Tính tích 2 số.");
+            //Console.WriteLine("3.   Tính hiệu 2 số."); 
+            //Console.WriteLine("4.   Giải phương trình bậc 1."); 
+            //Console.WriteLine("5.   Giải phương trình bậc 2.");
+            //Console.WriteLine("6.   Chuyển đổi độ C thành độ K.");
+            //Console.WriteLine("7.   Chuyển đổi độ C thành độ F.");
+            //Console.WriteLine("8.   Tính giai thừa của 1 số.");
+            //Console.WriteLine("9.   Liệt kê tất cả các số nguyên tố nhỏ hơn 1 số.");
+            //Console.WriteLine("10.  Kiểm tra một số là số chẵn hay số lẻ.");
+            //Console.WriteLine("11.  In ra mảng số lẻ từ một mảng số nguyên.");
+            //Console.WriteLine("12.  In ra mảng số chẵn từ một mảng số nguyên.");
+            //Console.WriteLine("13.  Sắp xếp mảng tăng dần.");
+            //Console.WriteLine("14.  Sắp xếp mảng giảm dần.");
+            //Console.WriteLine("15.  Hiển thị số bằng chữ.");
+            //Console.WriteLine("16.  Tính toán phân số.");
+            //Console.WriteLine("17.  Thống kê tình hình học tập của một lớp gồm 5 sinh viên.");
+            //Console.WriteLine("------------------------------------------------------------");
+
+            //loop:
+            //if(!ValidateData.CheckNullAndGreaterThanZero_Data(Console.ReadLine(), optionNumber))
+            //{
+            //    Console.WriteLine("Giá trị nhập vào không hợp lệ. Vui lòng nhập lại.");
+            //    goto loop;
+            //}    
                 
-            switch (optionNumber)
-            { 
-                case (int)OPTION_NUMBER.CALCULATE_FRACTION: 
-                    int tuSo1, mauSo1, tuSo2, mauSo2;
-                    Bai1_Bussiness.UserInput(tuSo1);
-                    Console.WriteLine(); break;
-                default: 
-                    Console.WriteLine("Tính năng đang bảo trì!");               
-                break;
-            }
-            Console.WriteLine("------------------------------------------------------------");
-            Console.WriteLine("Bạn có muốn tiếp tục chương trình! (Y/N)");
-            loop1:
-            optionChar = Console.ReadLine().ToUpper();
-            if (!Enum.GetNames(typeof(OPTION_CHAR)).Contains(optionChar))
-            {            
-                Console.WriteLine("Giá trị nhập vào không hợp lệ. Vui lòng nhập lại.");
-                goto loop1;
-            }    
-            if (optionChar == nameof(OPTION_CHAR.Y))
-            {
-                Console.WriteLine("------------------------------------------------------------");
-                goto loop2;
-            }
+            //switch (optionNumber)
+            //{ 
+            //    case (int)OPTION_NUMBER.CALCULATE_FRACTION: 
+            //        int tuSo1, mauSo1, tuSo2, mauSo2;
+            //        Bai1_Bussiness.UserInput(tuSo1);
+            //        Console.WriteLine(); break;
+            //    default: 
+            //        Console.WriteLine("Tính năng đang bảo trì!");               
+            //    break;
+            //}
+            //Console.WriteLine("------------------------------------------------------------");
+            //Console.WriteLine("Bạn có muốn tiếp tục chương trình! (Y/N)");
+            //loop1:
+            //optionChar = Console.ReadLine().ToUpper();
+            //if (!Enum.GetNames(typeof(OPTION_CHAR)).Contains(optionChar))
+            //{            
+            //    Console.WriteLine("Giá trị nhập vào không hợp lệ. Vui lòng nhập lại.");
+            //    goto loop1;
+            //}    
+            //if (optionChar == nameof(OPTION_CHAR.Y))
+            //{
+            //    Console.WriteLine("------------------------------------------------------------");
+            //    goto loop2;
+            //}
 
-            Console.WriteLine("Kết thúc chương trình!");
-            Environment.Exit(0);
+            //Console.WriteLine("Kết thúc chương trình!");
+            //Environment.Exit(0);
         }
 
 

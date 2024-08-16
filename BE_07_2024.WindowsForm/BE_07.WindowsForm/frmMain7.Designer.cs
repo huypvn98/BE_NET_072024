@@ -72,6 +72,7 @@
             this.btnExportByWeek.TabIndex = 6;
             this.btnExportByWeek.Text = "Quản lý nhân viên";
             this.btnExportByWeek.UseVisualStyleBackColor = true;
+            this.btnExportByWeek.Click += new System.EventHandler(this.btnExportByWeek_Click);
             // 
             // frmMain7
             // 

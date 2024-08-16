@@ -41,7 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bai8_Bussiness.cs" />
+    <Compile Include="DO\Enum\bai8_Option .cs" />
     <Compile Include="DO\Enum\Option.cs" />
+    <Compile Include="DO\NhanVien.cs" />
+    <Compile Include="DO\NhanVienFullTime.cs" />
+    <Compile Include="DO\NhanVienPartTime.cs" />
     <Compile Include="Session3\Bai1_Bussiness.cs" />
     <Compile Include="Bai2_Bussiness.cs" />
     <Compile Include="DO\PhanSo.cs" />

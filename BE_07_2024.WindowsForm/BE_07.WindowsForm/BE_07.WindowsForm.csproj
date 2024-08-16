@@ -121,6 +121,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmEmployeeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeManagement.designer.cs">
+      <DependentUpon>frmEmployeeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGeometryManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmEmployeeManagement.resx">
+      <DependentUpon>frmEmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGeometryManagement.resx">
       <DependentUpon>frmGeometryManagement.cs</DependentUpon>
     </EmbeddedResource>

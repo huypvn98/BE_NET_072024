@@ -22,5 +22,11 @@ namespace BE_07.WindowsForm
             frmGeometryManagement frm = new frmGeometryManagement();
             frm.ShowDialog();
         }
+
+        private void btnExportByWeek_Click(object sender, EventArgs e)
+        {
+            frmEmployeeManagement frm = new frmEmployeeManagement();
+            frm.ShowDialog();
+        }
     }
 }

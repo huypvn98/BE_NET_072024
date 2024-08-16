@@ -132,15 +132,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\EmployeeBusiness.cs" />
     <Compile Include="Business\GeometryBusiness.cs" />
     <Compile Include="Business\InvoiceBusiness.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="DO\Enum\Interval.cs" />
     <Compile Include="DO\Enum\ErrorCode.cs" />
     <Compile Include="DO\Enum\InteractiveMethod.cs" />
+    <Compile Include="DO\Intern.cs" />
+    <Compile Include="DO\ParttimeEmployee.cs" />
+    <Compile Include="DO\FulltimeEmployee.cs" />
     <Compile Include="DO\HinhChuNhat.cs" />
     <Compile Include="DO\HinhHoc.cs" />
     <Compile Include="DO\HinhTron.cs" />
+    <Compile Include="DO\Employee.cs" />
     <Compile Include="DO\Invoice.cs" />
     <Compile Include="DO\ResponseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
