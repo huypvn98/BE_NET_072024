@@ -1,6 +1,9 @@
 ﻿using BE072024.Common_NetFrameWork.Common;
 using BE072024.DataAcceess_NetFrameWork;
-using BE072024.DataAcceess_NetFrameWork.DO;
+using BE072024.DataAcceess_NetFrameWork.DO.Session10;
+using BE072024.DataAcceess_NetFrameWork.DO.Session10.Repository;
+using BE072024.DataAcceess_NetFrameWork.DO.Session10.Service;
+using BE072024.DataAcceess_NetFrameWork.DO.Session9;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -43,15 +46,88 @@ namespace BE_07.ConsoleApp
 
         static void Main(string[] args)
         {
+            List<Room> rooms = new List<Room>();
+            List<Booking> bookings = new List<Booking>();
             Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Bai8_Bussiness bai8_Bussiness = new Bai8_Bussiness();
-            bai8_Bussiness.loadMenu();
+            Console.InputEncoding = System.Text.Encoding.UTF8;
+            IRoomRepository roomRepository = new RoomRepository();
+            IBookingRepository bookingRepository = new BookingRepository();
+            IBookingService bookingService = new BookingService(bookingRepository, roomRepository);
+            Bai10_Bussiness bai10_Bussiness = new Bai10_Bussiness(rooms, bookings);
+            while (true)
+            {
+                Console.WriteLine("Chọn một tùy chọn:");
+                Console.WriteLine("1. Thêm phòng mới");
+                Console.WriteLine("2. Tạo đặt phòng mới");
+                Console.WriteLine("3. Xóa phòng");
+                Console.WriteLine("4. Hủy đặt phòng");
+                Console.WriteLine("5. Hiển thị danh sách phòng");
+                Console.WriteLine("6. Thoát");
+                Console.Write("Lựa chọn của bạn: ");
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1:
+                        bai10_Bussiness.AddNewRoom(roomRepository);
+                        break;
+                    case 2:
+                        CreateNewBooking(bookingService);
+                        break;
+                    case 3:
+                        DeleteRoom(roomRepository);
+                        break;
+                    case 4:
+                        CancelBooking(bookingService);
+                        break;
+                    case 5:
+                        DisplayRooms(roomRepository);
+                        break;
+                    case 6:
+                        return;
+                    default:
+                        Console.WriteLine("Lựa chọn không hợp lệ. Vui lòng thử lại.");
+                        break;
+                }
+            }
+            //Bai9_Bussiness bai9_Bussiness = new Bai9_Bussiness();
+            //List<NhanVien> danhSachNhanVien = new List<NhanVien>();
+            //while (true)
+            //{
+            //    Console.WriteLine("Menu:");
+            //    Console.WriteLine("1. Thêm nhân viên");
+            //    Console.WriteLine("2. Tìm kiếm nhân viên");
+            //    Console.WriteLine("3. Tạo sản lượng theo công đoạn của từng nhân viên");
+            //    Console.WriteLine("4. Xuất báo cáo ra Excel");
+            //    Console.WriteLine("5. Thoát");
+            //    Console.Write("Chọn chức năng: ");
+            //    int chon = int.Parse(Console.ReadLine());
+
+            //    switch (chon)
+            //    {
+            //        case 1:
+            //            bai9_Bussiness.ThemNhanVien();
+            //            break;
+            //        case 2:
+            //            bai9_Bussiness.TimKiemNhanVien();
+            //            break;
+            //        case 3:
+            //            bai9_Bussiness.TaoSanLuong();                        
+            //            break;
+            //        case 4:
+            //            bai9_Bussiness.XuatBaoCao();
+            //            return;
+            //        default:
+            //            Console.WriteLine("Lựa chọn không hợp lệ!");
+            //            break;
+            //    }
+            //}
             //NhanVien nhanVien = new NhanVien("Nguyen Van A", "NV001", 1000);
             //Console.WriteLine(nhanVien.HoTen);
             //int optionNumber = 0;
             //string optionChar = "Y";
 
-            
+
             //loop2:
             //Console.WriteLine("**************Hãy chọn thao tác cần thực hiện***************");
             //Console.WriteLine("------------------------------------------------------------");
@@ -80,7 +156,7 @@ namespace BE_07.ConsoleApp
             //    Console.WriteLine("Giá trị nhập vào không hợp lệ. Vui lòng nhập lại.");
             //    goto loop;
             //}    
-                
+
             //switch (optionNumber)
             //{ 
             //    case (int)OPTION_NUMBER.CALCULATE_FRACTION: 
