@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BE_072024.NetCoreAPI", "BE_072024.NetCoreAPI\BE_072024.NetCoreAPI.csproj", "{94FA022F-F0D6-4993-A53D-8D67E80DD50D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.NetCore", "DataAccess.NetCore\DataAccess.NetCore.csproj", "{5A8D50A5-0D26-47AB-ABF8-B952F2EA0D75}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94FA022F-F0D6-4993-A53D-8D67E80DD50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94FA022F-F0D6-4993-A53D-8D67E80DD50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94FA022F-F0D6-4993-A53D-8D67E80DD50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94FA022F-F0D6-4993-A53D-8D67E80DD50D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8D50A5-0D26-47AB-ABF8-B952F2EA0D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8D50A5-0D26-47AB-ABF8-B952F2EA0D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8D50A5-0D26-47AB-ABF8-B952F2EA0D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8D50A5-0D26-47AB-ABF8-B952F2EA0D75}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {936A91A7-9591-4CD7-B7F5-B0AD851208A7}
+	EndGlobalSection
+EndGlobal
